@@ -1,10 +1,16 @@
 import React from 'react';
+import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 
-const Widget2 = () => (
-    <div>
-        <h2>Widget 2</h2>
-        <p>Descripción del Widget 2</p>
-    </div>
+const Widget1 = () => (
+    <Card className="max-w-[400px]">
+        <CardHeader className="flex gap-3">
+            <h1>Widget 2</h1>
+        </CardHeader>
+        <CardBody>
+            <p>Descripción del Widget 2</p>
+        </CardBody>
+        <Divider />
+    </Card>
 );
 
-export default Widget2;
+export default Widget1;
