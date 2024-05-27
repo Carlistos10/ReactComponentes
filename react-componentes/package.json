@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@nextui-org/card": "^2.0.28",
+    "@nextui-org/listbox": "^2.1.20",
     "@nextui-org/react": "^2.3.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
