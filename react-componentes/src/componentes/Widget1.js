@@ -3,6 +3,7 @@ import './Widgets.css';
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 import { Calendar } from "@nextui-org/react";
+import { parseDate } from '@internationalized/date';
 
 
 const Widget1 = () => (
@@ -11,8 +12,8 @@ const Widget1 = () => (
             <h1>Widget 1</h1>
         </CardHeader>
         <CardBody>
-            <div className="flex gap-x-4">
-                <Calendar aria-label="Date (No Selection)" />
+            <div className="ancho">
+                <Calendar aria-label="Date" defaultValue={parseDate("2024-06-15")} className='dia' />
             </div>
             <Listbox
                 aria-label="Actions"

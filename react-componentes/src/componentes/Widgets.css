@@ -1,3 +1,5 @@
+/* Boton de guardar */
+
 .guardar:hover {
     cursor: pointer;
 }
@@ -19,6 +21,25 @@ ul {
     align-items: start;
 }
 
-.max-w-[400px] {
-    width: 700px;
+/* calendario */
+
+.dia:hover {
+    cursor: pointer;
+}
+
+.flex {}
+
+/* reloj */
+
+.reloj {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.tiempo {
+    background-color: black;
+    padding: 30px;
+    justify-content: 5px;
+    border-radius: 5px;
 }
