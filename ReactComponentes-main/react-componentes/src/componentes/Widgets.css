@@ -27,7 +27,6 @@ ul {
     cursor: pointer;
 }
 
-.flex {}
 
 /* reloj */
 
@@ -42,4 +41,21 @@ ul {
     padding: 30px;
     justify-content: 5px;
     border-radius: 5px;
+}
+
+/* comidas */
+
+.comidas {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.esp {
+    padding: 10px;
+}
+
+#count {
+    margin-top: 20px;
+    font-weight: bold;
 }
