@@ -4,6 +4,7 @@ import Widget2 from './componentes/Widget2';
 import Widget3 from './componentes/Widget3';
 import Widget4 from './componentes/Widget4';
 
+
 function App() {
   return (
     <div className="App">
