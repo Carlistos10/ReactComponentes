@@ -1,30 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Widgets.css';
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import { CheckboxGroup, Checkbox } from "@nextui-org/react";
+import { CircularProgress } from "@nextui-org/react";
 
 const Widget3 = () => {
-    const [selectedItems, setSelectedItems] = useState([]);
 
-    useEffect(() => {
-        const checkboxes = document.querySelectorAll('.checkbox');
-        const updateSelectedItems = () => {
-            const selected = Array.from(checkboxes)
-                .filter(checkbox => checkbox.checked)
-                .map(checkbox => checkbox.nextSibling.textContent.trim());
-            setSelectedItems(selected);
-        };
+    const [loading, setLoading] = useState(false);
 
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateSelectedItems);
-        });
+    const handleAction = (key) => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            alert(key);
+        }, 1500);
+    };
 
-        return () => {
-            checkboxes.forEach(checkbox => {
-                checkbox.removeEventListener('change', updateSelectedItems);
-            });
-        };
-    }, []);
+    const [selected, setSelected] = React.useState([]);
 
     return (
         <Card className="max-w-[400px]">
@@ -32,32 +25,27 @@ const Widget3 = () => {
                 <h1>Widget 3</h1>
             </CardHeader>
             <CardBody>
-                <div className='comidas'>
-                    <div className='esp'>
-                        <input type='checkbox' className="checkbox" /> Desayuno
-                    </div>
-                    <div className='esp'>
-                        <input type='checkbox' className="checkbox" /> Media Mañana
-                    </div>
-                    <div className='esp'>
-                        <input type='checkbox' className="checkbox" /> Comida
-                    </div>
-                    <div className='esp'>
-                        <input type='checkbox' className="checkbox" /> Merienda
-                    </div>
-                    <div className='esp'>
-                        <input type='checkbox' className="checkbox" /> Cena
-                    </div>
-                    <div className='esp'>
-                        <div id="count">Comidas seleccionadas: {selectedItems.join(', ')}</div>
-                    </div>
+                <div className="flex flex-col gap-3">
+                    <CheckboxGroup
+                        label="Rutina antes del Trabajo"
+                        value={selected}
+                        onValueChange={setSelected}
+                    >
+                        <Checkbox value="Cara Limpia">Lavarse la cara</Checkbox>
+                        <Checkbox value="Desayuno">Desayuno</Checkbox>
+                        <Checkbox value="Dientes Limpos">Lavarse los dientes</Checkbox>
+                        <Checkbox value="Arreglado">Vestirse</Checkbox>
+                        <Checkbox value="Material Listo">Coger Mochila</Checkbox>
+                        <Checkbox value="Casa Segura">Cerrar la puerta</Checkbox>
+                    </CheckboxGroup>
                 </div>
                 <Listbox
                     aria-label="Actions"
-                    onAction={(key) => alert(key)}
+                    onAction={handleAction}
                 >
                     <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
                 </Listbox>
+                {loading && <CircularProgress label="Loading..." />}
             </CardBody>
             <Divider />
         </Card>

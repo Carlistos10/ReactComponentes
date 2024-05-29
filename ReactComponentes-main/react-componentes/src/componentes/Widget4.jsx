@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Widgets.css';
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import { CircularProgress } from "@nextui-org/react";
 
-const Widget4 = () => (
-    <Card className="max-w-[400px]">
-        <CardHeader className="flex gap-3">
-            <h1>Widget 4</h1>
-        </CardHeader>
-        <CardBody>
-            <p>Descripción del Widget 4</p>
-            <Listbox
-                aria-label="Actions"
-                onAction={(key) => alert(key)}
-            >
-                <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
-            </Listbox>
-        </CardBody>
-        <Divider />
-    </Card>
-);
+const Widget4 = () => {
+
+    const [loading, setLoading] = useState(false);
+
+    const handleAction = (key) => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            alert(key);
+        }, 1500);
+    };
+
+    return (
+        <Card className="max-w-[400px]">
+            <CardHeader className="flex gap-3">
+                <h1>Widget 4</h1>
+            </CardHeader>
+            <CardBody>
+                <p>Descripción del Widget 4</p>
+                <Listbox
+                    aria-label="Actions"
+                    onAction={handleAction}
+                >
+                    <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
+                </Listbox>
+                {loading && <CircularProgress label="Loading..." />}
+            </CardBody>
+            <Divider />
+        </Card>
+    );
+};
 
 export default Widget4;

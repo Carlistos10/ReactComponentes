@@ -14,7 +14,7 @@ const Widget1 = () => {
         setTimeout(() => {
             setLoading(false);
             alert(key);
-        }, 1000); // 1 segundo de retraso
+        }, 1500);
     };
 
     return (
