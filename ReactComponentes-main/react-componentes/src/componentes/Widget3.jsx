@@ -4,22 +4,24 @@ import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 
 const Widget3 = () => {
-    const [checkedCount, setCheckedCount] = useState(0);
+    const [selectedItems, setSelectedItems] = useState([]);
 
     useEffect(() => {
         const checkboxes = document.querySelectorAll('.checkbox');
-        const updateCount = () => {
-            const checkedCount = document.querySelectorAll('.checkbox:checked').length;
-            setCheckedCount(checkedCount);
+        const updateSelectedItems = () => {
+            const selected = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.nextSibling.textContent.trim());
+            setSelectedItems(selected);
         };
 
         checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateCount);
+            checkbox.addEventListener('change', updateSelectedItems);
         });
 
         return () => {
             checkboxes.forEach(checkbox => {
-                checkbox.removeEventListener('change', updateCount);
+                checkbox.removeEventListener('change', updateSelectedItems);
             });
         };
     }, []);
@@ -47,7 +49,7 @@ const Widget3 = () => {
                         <input type='checkbox' className="checkbox" /> Cena
                     </div>
                     <div className='esp'>
-                        <div id="count">Comidas realizadas: {checkedCount}</div>
+                        <div id="count">Comidas seleccionadas: {selectedItems.join(', ')}</div>
                     </div>
                 </div>
                 <Listbox
