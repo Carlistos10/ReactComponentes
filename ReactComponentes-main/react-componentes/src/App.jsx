@@ -6,6 +6,7 @@ import Widget4 from './componentes/Widget4';
 import Widget5 from './componentes/Widget5';
 import Widget6 from './componentes/Widget6';
 import Widget7 from './componentes/Widget7';
+import Widget8 from './componentes/Widget8';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Widget5 />
         <Widget6 />
         <Widget7 />
-        <Widget4 />
+        <Widget8 />
       </div>
 
     </div>
