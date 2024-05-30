@@ -3,6 +3,7 @@ import Widget1 from './componentes/Widget1';
 import Widget2 from './componentes/Widget2';
 import Widget3 from './componentes/Widget3';
 import Widget4 from './componentes/Widget4';
+import Widget5 from './componentes/Widget5';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Widget4 />
       </div>
       <div className='row'>
-        <Widget1 />
+        <Widget5 />
         <Widget2 />
         <Widget3 />
         <Widget4 />

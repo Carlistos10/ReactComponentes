@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './Widgets.css';
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
-import { Calendar } from "@nextui-org/react";
-import { parseDate } from '@internationalized/date';
 import { CircularProgress } from "@nextui-org/react";
 
-const Widget1 = () => {
+
+const Widget4 = () => {
+
     const [loading, setLoading] = useState(false);
 
     const handleAction = (key) => {
@@ -20,11 +20,11 @@ const Widget1 = () => {
     return (
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
-                <h1>Widget 1</h1>
+                <h1>Widget 5</h1>
             </CardHeader>
             <CardBody>
-                <div>
-                    <Calendar aria-label="Date" defaultValue={parseDate("2024-06-15")} className='dia' />
+                <div className='cronometro'>
+
                 </div>
                 <Listbox
                     aria-label="Actions"
@@ -39,4 +39,4 @@ const Widget1 = () => {
     );
 };
 
-export default Widget1;
+export default Widget4;

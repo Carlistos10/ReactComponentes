@@ -4,6 +4,8 @@ import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 import { CircularProgress } from "@nextui-org/react";
 
+import { Slider } from "@nextui-org/react";
+
 const Widget4 = () => {
 
     const [loading, setLoading] = useState(false);
@@ -22,7 +24,20 @@ const Widget4 = () => {
                 <h1>Widget 4</h1>
             </CardHeader>
             <CardBody>
-                <p>Descripción del Widget 4</p>
+                <div className='satisfaccion'>
+                    <p>¿Cómo me siento hoy?</p>
+                    <p className='mal'>mal</p>
+                    <p className='bien'>bien</p>
+                    <Slider
+                        size="lg"
+                        step={0.01}
+                        maxValue={1}
+                        minValue={0}
+                        aria-label="Satisfaccion"
+                        defaultValue={0.6}
+                        className="max-w-md"
+                    />
+                </div>
                 <Listbox
                     aria-label="Actions"
                     onAction={handleAction}
