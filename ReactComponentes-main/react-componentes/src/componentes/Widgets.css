@@ -28,32 +28,33 @@ ul {
 }
 
 
-/* reloj */
+/* reloj y cronometro*/
 
 .reloj {
     font-size: 48px;
     font-weight: bold;
-    color: #ffffff;
+    color: #00eeff;
 }
 
 .tiempo {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     padding: 30px;
     justify-content: 5px;
     border-radius: 5px;
 }
 
-/* comidas */
-
-.comidas {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
+.cronometro {
+    margin: 10px;
+    align-items: center;
 }
 
-.esp {
-    padding: 10px;
+.cent {
+    margin-top: 15px;
+    padding-left: 15%;
 }
+
+
+/* rutina */
 
 #count {
     margin-top: 20px;
