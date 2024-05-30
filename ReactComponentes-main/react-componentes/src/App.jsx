@@ -12,7 +12,7 @@ import Widget8 from './componentes/Widget8';
 function App() {
   return (
     <div className="App">
-      <h1>Tienda de Widgets en React</h1>
+      <p className='titulo'>Tienda de Widgets en React</p>
       <div className='row'>
         <Widget1 />
         <Widget2 />
@@ -25,7 +25,6 @@ function App() {
         <Widget7 />
         <Widget8 />
       </div>
-
     </div>
   );
 }
