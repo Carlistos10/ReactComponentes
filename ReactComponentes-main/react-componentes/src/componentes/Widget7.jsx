@@ -24,6 +24,7 @@ const Widget3 = () => {
             <CardHeader className="flex gap-3">
                 <h1>Centro de Control 💻</h1>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div className='flex flex-col gap-3 esp'>
                     <Switch defaultSelected color="success">WiFi 🛜</Switch>

@@ -22,6 +22,7 @@ const Widget1 = () => {
             <CardHeader className="flex gap-3">
                 <p>Calendario 🗓️</p>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div>
                     <Calendar aria-label="Date" defaultValue={parseDate("2024-06-15")} className='dia' />

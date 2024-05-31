@@ -24,6 +24,7 @@ const Widget3 = () => {
             <CardHeader className="flex gap-3">
                 <h1>Rutina Mañanera 🌞</h1>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div className="flex flex-col gap-3">
                     <CheckboxGroup

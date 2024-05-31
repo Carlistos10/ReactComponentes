@@ -23,6 +23,7 @@ const Widget4 = () => {
             <CardHeader className="flex gap-3">
                 <h1>¿Cómo te encuentras hoy 💆?</h1>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div className='satisfaccion'>
                     <p className='mal'>😞</p>

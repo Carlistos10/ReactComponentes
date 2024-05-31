@@ -23,6 +23,7 @@ const Widget3 = () => {
             <CardHeader className="flex gap-3">
                 <h1>Ubicación 📌</h1>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div className='flex flex-col gap-3 esp'>
                     <iframe

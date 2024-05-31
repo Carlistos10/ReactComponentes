@@ -54,6 +54,7 @@ const Widget5 = () => {
             <CardHeader className="flex gap-3">
                 <h1>Cronómetro ⌚</h1>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div>
                     <div className='cronometro'>

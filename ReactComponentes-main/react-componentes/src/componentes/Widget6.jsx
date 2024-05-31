@@ -118,6 +118,7 @@ const Widget1 = () => {
             <CardHeader className="flex gap-3">
                 <h1>Horario 📓</h1>
             </CardHeader>
+            <hr />
             <CardBody>
                 <div>
                     <Table aria-label="Example table with dynamic content">
