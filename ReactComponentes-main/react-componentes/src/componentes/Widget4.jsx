@@ -21,13 +21,12 @@ const Widget4 = () => {
     return (
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
-                <h1>Widget 4</h1>
+                <h1>¿Cómo te encuentras hoy 💆?</h1>
             </CardHeader>
             <CardBody>
                 <div className='satisfaccion'>
-                    <p>¿Cómo me siento hoy?</p>
-                    <p className='mal'>mal</p>
-                    <p className='bien'>bien</p>
+                    <p className='mal'>😞</p>
+                    <p className='bien'>😁</p>
                     <Slider
                         size="lg"
                         step={0.01}
@@ -42,7 +41,7 @@ const Widget4 = () => {
                     aria-label="Actions"
                     onAction={handleAction}
                 >
-                    <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
+                    <ListboxItem className='guardar' key="Widget Guardado ✅">Guardar Widget 💾</ListboxItem>
                 </Listbox>
                 {loading && <CircularProgress label="Loading..." />}
             </CardBody>

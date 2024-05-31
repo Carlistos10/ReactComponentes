@@ -22,20 +22,20 @@ const Widget3 = () => {
     return (
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
-                <h1>Widget 7</h1>
+                <h1>Centro de Control 💻</h1>
             </CardHeader>
             <CardBody>
                 <div className='flex flex-col gap-3 esp'>
-                    <Switch defaultSelected color="success">WiFi</Switch>
-                    <Switch defaultSelected color="success">Datos Móviles</Switch>
-                    <Switch defaultSelected color="success">Bluetooth</Switch>
-                    <Switch defaultSelected color="warning">Ahorro de batería</Switch>
+                    <Switch defaultSelected color="success">WiFi 🛜</Switch>
+                    <Switch defaultSelected color="success">Datos Móviles 📶</Switch>
+                    <Switch defaultSelected color="success">Bluetooth 🌐</Switch>
+                    <Switch defaultSelected color="warning">Ahorro de batería 🪫</Switch>
                 </div>
                 <Listbox
                     aria-label="Actions"
                     onAction={handleAction}
                 >
-                    <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
+                    <ListboxItem className='guardar' key="Widget Guardado ✅">Guardar Widget 💾</ListboxItem>
                 </Listbox>
                 {loading && <CircularProgress label="Loading..." />}
             </CardBody>

@@ -20,7 +20,7 @@ const Widget1 = () => {
     return (
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
-                <h1>Widget 1</h1>
+                <p>Calendario 🗓️</p>
             </CardHeader>
             <CardBody>
                 <div>
@@ -30,7 +30,7 @@ const Widget1 = () => {
                     aria-label="Actions"
                     onAction={handleAction}
                 >
-                    <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
+                    <ListboxItem className='guardar' key="Widget Guardado ✅">Guardar Widget  💾</ListboxItem>
                 </Listbox>
                 {loading && <CircularProgress label="Loading..." />}
             </CardBody>

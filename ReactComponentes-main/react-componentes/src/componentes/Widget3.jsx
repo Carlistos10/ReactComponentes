@@ -22,28 +22,27 @@ const Widget3 = () => {
     return (
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
-                <h1>Widget 3</h1>
+                <h1>Rutina Mañanera 🌞</h1>
             </CardHeader>
             <CardBody>
                 <div className="flex flex-col gap-3">
                     <CheckboxGroup
-                        label="Rutina antes del Trabajo"
                         value={selected}
                         onValueChange={setSelected}
                     >
-                        <Checkbox value="Cara Limpia">Lavarse la cara</Checkbox>
-                        <Checkbox value="Desayuno">Desayuno</Checkbox>
-                        <Checkbox value="Dientes Limpos">Lavarse los dientes</Checkbox>
-                        <Checkbox value="Arreglado">Vestirse</Checkbox>
-                        <Checkbox value="Material Listo">Coger Mochila</Checkbox>
-                        <Checkbox value="Casa Segura">Cerrar la puerta</Checkbox>
+                        <Checkbox value="Cara Limpia">Lavarse la cara 🧼</Checkbox>
+                        <Checkbox value="Desayuno">Desayuno 🥐</Checkbox>
+                        <Checkbox value="Dientes Limpos">Lavarse los dientes 🪥</Checkbox>
+                        <Checkbox value="Arreglado">Vestirse 👚</Checkbox>
+                        <Checkbox value="Material Listo">Coger Mochila 🎒</Checkbox>
+                        <Checkbox value="Casa Segura">Cerrar la puerta 🏡</Checkbox>
                     </CheckboxGroup>
                 </div>
                 <Listbox
                     aria-label="Actions"
                     onAction={handleAction}
                 >
-                    <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
+                    <ListboxItem className='guardar' key="Widget Guardado ✅">Guardar Widget 💾</ListboxItem>
                 </Listbox>
                 {loading && <CircularProgress label="Loading..." />}
             </CardBody>

@@ -12,18 +12,27 @@ import Widget8 from './componentes/Widget8';
 function App() {
   return (
     <div className="App">
-      <p className='titulo'>Tienda de Widgets en React</p>
+      <div className='rowhead header'>
+        <p className='titulo'>Tienda de Widgets en React</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" />
+      </div>
+      <hr />
       <div className='row'>
-        <Widget1 />
         <Widget2 />
+        <Widget1 />
         <Widget3 />
-        <Widget4 />
       </div>
       <div className='row'>
-        <Widget5 />
-        <Widget6 />
         <Widget7 />
+        <Widget4 />
+        <Widget5 />
+      </div>
+      <div className='row'>
+        <Widget6 />
         <Widget8 />
+      </div>
+      <div className='row header'>
+        <p className='abajo'>Carlos Maranhas Gómez-Choco S2DAW</p>
       </div>
     </div>
   );

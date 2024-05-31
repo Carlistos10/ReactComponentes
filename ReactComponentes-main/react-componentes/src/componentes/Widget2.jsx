@@ -38,7 +38,7 @@ const Widget2 = () => {
 
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
-                <h1>Widget 2</h1>
+                <h1>Reloj ⏳</h1>
             </CardHeader>
             <CardBody>
                 <div className='reloj'>
@@ -50,7 +50,7 @@ const Widget2 = () => {
                     aria-label="Actions"
                     onAction={handleAction}
                 >
-                    <ListboxItem className='guardar' key="Widget Guardado">Guardar Widget</ListboxItem>
+                    <ListboxItem className='guardar' key="Widget Guardado ✅">Guardar Widget 💾</ListboxItem>
                 </Listbox>
                 {loading && <CircularProgress label="Loading..." />}
             </CardBody>
