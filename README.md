@@ -5,7 +5,7 @@ En este proyecto vemos las funciones principales de los componentes de React, qu
 
 Las tecnologías utilizadas son React
 
-![Logo](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tithink.com%2Fes%2F2018%2F11%2F14%2F7-razones-para-utilizar-react%2F&psig=AOvVaw2Yhhl5idijp1VZxTKp-xjl&ust=1717428652155000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjdwbeevYYDFQAAAAAdAAAAABAE)
+![Logo](https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F096baapsqqt9fks0us99.png)
 
 La librería de componentes NextUI
 
