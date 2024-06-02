@@ -1,3 +1,4 @@
+/* Aqui añadimos las propiedades de tailwind para que las pueda usar aturomaticamente al nombrearlas en las clases */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

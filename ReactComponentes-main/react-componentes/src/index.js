@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+//Añadimos este import para que funcione correctamente todos los componentes de nextui
 import { NextUIProvider } from "@nextui-org/react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

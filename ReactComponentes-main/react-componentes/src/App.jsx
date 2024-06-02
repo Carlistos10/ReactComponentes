@@ -1,3 +1,4 @@
+//Primero debemos importar todos los componentes en el archivo principal, con su css correspondiente
 import './App.css';
 import Widget1 from './componentes/Widget1';
 import Widget2 from './componentes/Widget2';
@@ -12,11 +13,13 @@ import Widget8 from './componentes/Widget8';
 function App() {
   return (
     <div className="App">
+      {/* Aqui indicamos el header con su imagen de la herramienta correspondiente */}
       <div className='rowhead header'>
         <p className='titulo'>Tienda de Widgets en React</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" />
       </div>
       <hr />
+      {/* Procedemos a colocar los widget de la forma más optima posible */}
       <div className='row'>
         <Widget2 />
         <Widget1 />

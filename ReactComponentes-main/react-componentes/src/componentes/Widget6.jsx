@@ -1,14 +1,16 @@
+//Primero importamos lo necesario para el funcionamiento de la tarjeta y el widget
 import React, { useState } from 'react';
 import './Widgets.css';
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 import { CircularProgress } from "@nextui-org/react";
 
+//Hay que añadir estos imports para poder crear una tabla
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
 
 const Widget1 = () => {
 
-
+    //Aqui creamos el contenido que va a tener cada fila
     const rows = [
         {
             key: "1",
@@ -75,6 +77,7 @@ const Widget1 = () => {
         }
     ];
 
+    //Indicamos el nombre de las columnas con sus keys para que recojan correctamente los datos
     const columns = [
         {
             key: "hora",
@@ -102,7 +105,7 @@ const Widget1 = () => {
         }
     ];
 
-
+    //Creamos un guardado falso para que aparezca que esta cargando y avisamos al usuario que se ha guardado correctamente
     const [loading, setLoading] = useState(false);
 
     const handleAction = (key) => {
@@ -114,6 +117,7 @@ const Widget1 = () => {
     };
 
     return (
+        //Usamos los componentes de nextui para crear la tarjeta y el widget
         <Card className="max-w-[400px]">
             <CardHeader className="flex gap-3">
                 <h1>Horario 📓</h1>
@@ -121,7 +125,8 @@ const Widget1 = () => {
             <hr />
             <CardBody>
                 <div>
-                    <Table aria-label="Example table with dynamic content">
+                    {/* Aqui indicamos la forma de la tabla y donde va cada dato */}
+                    <Table aria-label="tabla">
                         <TableHeader columns={columns}>
                             {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
                         </TableHeader>
@@ -134,12 +139,14 @@ const Widget1 = () => {
                         </TableBody>
                     </Table>
                 </div>
+                {/* En esta parte situamos el boton de guardado */}
                 <Listbox
                     aria-label="Actions"
                     onAction={handleAction}
                 >
                     <ListboxItem className='guardar' key="Widget Guardado ✅">Guardar Widget 💾</ListboxItem>
                 </Listbox>
+                {/* Realizamos una carga falsa para mostrar la animación de guardado */}
                 {loading && <CircularProgress label="Loading..." />}
             </CardBody>
             <Divider />
