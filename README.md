@@ -16,6 +16,12 @@ Y el css de TailWind, que se combina con NextUI
 
 ## Run Locally
 
+Acces to the main folder
+
+```bash
+  cd .\ReactComponentes-main\react-componentes
+```
+
 Install dependencies
 
 ```bash
